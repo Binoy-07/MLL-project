@@ -1,36 +1,5 @@
 # MLL-project
 
-%%writefile churn_app.py
-# আপনার Streamlit কোড এখানে থাকবে...
-import streamlit as st
-import pandas as pd
-import numpy as np
-import joblib
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-
-# --- ১. মডেল এবং প্রিপ্রসেসিং টুলস লোড করা ---
-# ধরে নেওয়া হলো ফাইলগুলো একই ডিরেক্টরিতে আছে
-try:
-    scaler = joblib.load('scaler.pkl')
-    model = joblib.load('logistic_regression_model.pkl')
-    # এনকোডিং-এর পর ট্রেনিং ডেটা থেকে প্রাপ্ত কলামগুলির তালিকা
-    encoded_features = joblib.load('encoded_features.pkl')
-except FileNotFoundError:
-    st.error("Error loading model files! Ensure 'scaler.pkl', 'logistic_regression_model.pkl', and 'encoded_features.pkl' are available.")
-    st.stop()
-
-# --- ২. অ্যাপ্লিকেশনের কনফিগারেশন ---
-st.set_page_config(page_title="Telco Churn Prediction", layout="wide")
-st.title("📞 Customer Churn Prediction App")
-st.markdown("### 📊 Logistic Regression Model with SMOTE-Balanced Data")
-st.markdown("---")
-
-
-# --- ৩. ইনপুট ফাংশন: ব্যবহারকারীর কাছ থেকে ডেটা নেওয়া ---
-
-def user_input_features():
-    st.sidebar.header('Input Customer Data')
 
     # নিউমেরিক্যাল ফিচার্স (Sliders)
     tenure = st.sidebar.slider('Tenure (Months)', 0, 72, 24)
