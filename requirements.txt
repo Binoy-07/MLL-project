@@ -3,7 +3,9 @@ pandas
 numpy
 scikit-learn
 joblib
-/*
+
+"""
+
 absl-py==1.4.0
 absolufy-imports==0.3.1
 accelerate==1.11.0
@@ -682,4 +684,4 @@ zict==3.0.0
 zipp==3.23.0
 zstandard==0.25.0
 
-*/
+"""
