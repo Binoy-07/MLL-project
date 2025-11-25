@@ -121,6 +121,6 @@ if st.button('♻️Predict Churn'):
         st.markdown("---")
 
 import streamlit as st
-st.header("Devloped by BINOY😉!")
-st.header("Supervised by: Avishek Chowdhury Sir🎓")
+st.subheader("Devloped by BINOY😉!")
+st.subheader("Supervised by: Avishek Chowdhury Sir🎓")
 # ...
