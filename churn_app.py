@@ -122,4 +122,5 @@ if st.button('♻️Predict Churn'):
 
 import streamlit as st
 st.title("Devloped by BINOY😉!")
+st.title("Supervised by: Avishek Chowdhury🎓")
 # ...
